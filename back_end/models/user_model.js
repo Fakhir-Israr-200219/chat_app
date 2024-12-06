@@ -15,7 +15,9 @@ const user_schema = new mongose.Schema({
     },
     password:{
         type:String,
-        required:true
+        required:true,
+        select:false,
+        minlength:8
     },
     profiel_picture:{
         type:String,
