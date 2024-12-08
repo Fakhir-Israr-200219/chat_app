@@ -1,3 +1,7 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/home/home.jsx'
+import Login from './pages/login/login.jsx'
+import Signup from './pages/signup.jsx'
 import { useState } from 'react'
 import './App.css'
 
@@ -6,9 +10,13 @@ function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

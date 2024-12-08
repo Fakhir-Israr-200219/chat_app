@@ -17,5 +17,8 @@ const messageSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+},{
+    timeseries:true
 });
+
 module.exports = mongoose.model("messsages", messageSchema);
